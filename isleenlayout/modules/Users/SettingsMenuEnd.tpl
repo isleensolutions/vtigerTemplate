@@ -1,0 +1,10 @@
+{strip}
+						</div>
+								</div>
+							</section>
+						</div>						
+				</div>
+			</div>
+		</section>
+	</section>	
+{/strip}

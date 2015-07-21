@@ -1,0 +1,36 @@
+<div style='padding:4%;padding-top: 0;margin-bottom: 2%'>
+	
+	{* Comupte the nubmer of columns required *}
+	{assign var="SPANSIZE" value=12}
+	{if $MINILIST_WIDGET_MODEL->getHeaderCount()}
+		{assign var="SPANSIZE" value=12/$MINILIST_WIDGET_MODEL->getHeaderCount()}
+	{/if}
+	
+	<div class="row-fluid" style="padding:5px">
+		{foreach item=FIELD from=$MINILIST_WIDGET_MODEL->getHeaders()}
+		<div class="span{$SPANSIZE}"><strong>{vtranslate($FIELD->get('label'),$BASE_MODULE)}</strong></div>
+		{/foreach}
+	</div>
+	
+	{assign var="MINILIST_WIDGET_RECORDS" value=$MINILIST_WIDGET_MODEL->getRecords()}
+	
+	{foreach item=RECORD from=$MINILIST_WIDGET_RECORDS}
+	<div class="row-fluid" style="padding:5px">
+		{foreach item=FIELD from=$MINILIST_WIDGET_MODEL->getHeaders() name="minilistWidgetModelRowHeaders"}
+			<div class="span{$SPANSIZE} textOverflowEllipsis" title="{$RECORD->get($FIELD->get('name'))}">
+				{if $smarty.foreach.minilistWidgetModelRowHeaders.last}
+					<a href="{$RECORD->getDetailViewUrl()}" class="pull-right"><i title="{vtranslate('LBL_SHOW_COMPLETE_DETAILS',$MODULE_NAME)}" class="icon-th-list alignMiddle"></i></a>
+				{/if}
+				{$RECORD->get($FIELD->get('name'))}&nbsp;
+			</div>
+		{/foreach}
+	</div>
+	{/foreach}
+	
+	{if count($MINILIST_WIDGET_RECORDS) >= $MINILIST_WIDGET_MODEL->getRecordLimit()}
+	<div class="row-fluid" style="padding:5px;padding-bottom:10px;">
+		<a class="pull-right" href="index.php?module={$MINILIST_WIDGET_MODEL->getTargetModule()}&view=List&mode=showListViewRecords&viewname={$WIDGET->get('filterid')}">{vtranslate('LBL_MORE')}</a>
+	</div>
+	{/if}
+	
+</div>
