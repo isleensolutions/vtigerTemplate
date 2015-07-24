@@ -155,6 +155,7 @@
     <a href="index.php?module=Home&view=DashBoard" class="logo">Isleen<span>CRM</span></a> 
     <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
+				<!--{**
                 <ul class="nav top-menu">
                     <!-- settings start -->
                     <li class="dropdown" id="header_task_notification">
@@ -237,7 +238,7 @@
                         </a>
                     </li>
                     <!-- notification dropdown end -->
-                </ul>
+                </ul>**}-->
                 <!--  notification end -->
             </div>
             <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle header-toggle" type="button">
