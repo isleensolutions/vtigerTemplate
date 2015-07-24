@@ -435,6 +435,6 @@ jQuery(document).ready(function() {
 	app.listenPostAjaxReady(function() {
 		Vtiger_Index_Js.registerPostAjaxEvents();
 	});
-	Vtiger_Index_Js.getNotifications();
-	Vtiger_Index_Js.getTasks();
+	//Vtiger_Index_Js.getNotifications();
+	//Vtiger_Index_Js.getTasks();
 });
