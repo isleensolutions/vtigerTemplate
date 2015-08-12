@@ -14,6 +14,7 @@ open the file named 'Viewer.php' . Search for the contasnts 'DEFAULTLAYOUT' and 
  Once you have made this changes just refresh the CRM and your crm will be loaded with the new layout
 
  Note: This template is work for vtiger 6.0.0
+ 
 If you found any issues please send it to info@isleen.com
 
 Thank you
