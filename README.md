@@ -16,7 +16,8 @@ open the file named 'Viewer.php' . Search for the contasnts 'DEFAULTLAYOUT' and 
  Note: This template is work for vtiger 6.0.0
  
  
- #Screenshots
+ # Screenshots
+ 
  ![Timeline page](http://www.isleen.com/wp-content/uploads/2015/01/Home.png)
  ![Calendar](http://www.isleen.com/wp-content/uploads/2015/01/Calendar.png)
  ![Dashboard](http://www.isleen.com/wp-content/uploads/2015/01/Dashboard.png)
